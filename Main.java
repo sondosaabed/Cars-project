@@ -1,5 +1,5 @@
 //import java.util.Date;//because I didn't use it actually but put it because it's required 
-public class DriverClass { 
+public class Main { 
 	public static void main(String []args) {
     int currentYear=2020;
     int currentMonth=11;
@@ -9,9 +9,10 @@ public class DriverClass {
     if (x>12) {
     	x=x-12;//the month of the next year
     }
+    
     Car []cars= new Car[5];
     //Initialize the array of cars
-    cars[0]=new Car("0123-A",currentYear,11,"red",50000.00,"Mercedes",currentYear,x );
+    cars[0]=new Car("0123-A",2020,11,"red",50000.00,"Mercedes",currentYear,x );
     cars[1]=new Car("1230-A",2016,8,"blue",40000.00,"BMW",currentYear,x );
     cars[2]=new Car("2130-A",2011,5,"yellow",20000.00,"Mazda",currentYear,x );
     cars[3]=new Car("1320-A",2013,9,"white",30000.00,"Kia",currentYear,x ); 
@@ -21,19 +22,14 @@ public class DriverClass {
     printCarsInfo(cars);
     
     //pass the array to the method
-    maxPrice(cars);
+    System.out.println("Max car price is: ");
+    System.out.println(maxPrice(cars));
 	}
 	
 	public static void printCarsInfo( Car [ ] cars) {
   //this method is to print all information about cars with ages and guarantee due to.	
-		for(int i=0;i<=4;i++) {
-			System.out.println(cars[i].getYearManufacture());
-			System.out.println(cars[i].getMonthManufacture());
-			//System.out.println(cars[i].getColor().toUpperCase());
-			System.out.println(cars[i].getPrice());
-			System.out.println(cars[i].getCarAge().toUpperCase());
-			System.out.println(cars[i].getmanufactureby().toUpperCase());
-			System.out.println(cars[i].getCalculateGuarantee());
+		for(int i=0;i<cars.length;i++) {
+			System.out.println(""+ cars[i].toString());
 		} 
 	}
 	
@@ -47,6 +43,6 @@ public class DriverClass {
 	        	indexOfMaxPrice = i;
 	        }
 	    }
-	    return cars[indexOfMaxPrice]; 
+	    return cars[indexOfMaxPrice+1]; 
 	}
 } 
