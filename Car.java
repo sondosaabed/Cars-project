@@ -1,6 +1,4 @@
 //Sondos Ahmad Aabed
-//1190652
-//Dr. Yousef Lab1
 
 //import java.util.Date;//because I didn't use it actually but put it because it's required 
 
