@@ -24,7 +24,14 @@ public class Car {
 	
 	public Car(String plateNo,int yearmanufacture ,int monthmanufacture ,String color,double
 			price,String manufactureby,int guaranteedueyear ,int guaranteeduemonth ) {
-		
+		this.plateNo= plateNo;
+		this.yearmanufacture = yearmanufacture;
+		this.monthmanufacture = monthmanufacture;
+		this.color = color;
+		this.price = price;
+		this.manufactureby = manufactureby;
+		this.guaranteedueyear = guaranteedueyear;
+		this.guaranteeduemonth = guaranteeduemonth;
 	}
 	
 	public int getYearManufacture() {
@@ -101,10 +108,13 @@ public class Car {
 		guaranteeduemonth=month;
 	}	
 	
-	public String printCarInfo() {
-		String s=""+ plateNo + yearmanufacture + monthmanufacture +color+ price+ manufactureby+guaranteedueyear+guaranteeduemonth; 
-		System.out.printf(s);
-		return s; 
+	
+	@Override
+	public String toString() {
+		return "Car [currentYear=" + currentYear + ", currentMonth=" + currentMonth + ", plateNo=" + plateNo
+				+ ", color=" + color + ", manufactureby=" + manufactureby + ", yearmanufacture=" + yearmanufacture
+				+ ", monthmanufacture=" + monthmanufacture + "\n"+" guaranteedueyear=" + guaranteedueyear
+				+ ", guaranteeduemonth=" + guaranteeduemonth + ", price=" + price + "]"+ "\n";
 	}
 	
 } 
