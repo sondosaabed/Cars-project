@@ -1,5 +1,5 @@
 # Cars-project
-This is applying java inheritance on a cars project 
+This is applying java objects on a cars project 
 
 # Application Example:
 
